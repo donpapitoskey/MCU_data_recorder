@@ -345,7 +345,7 @@ uint8_t EUSART1_Read(void);
   @Returns
     None
 */
-void EUSART1_Write(uint8_t *txData);
+void EUSART1_Write(char *txData);
 
 /**
   @Summary
@@ -503,8 +503,6 @@ void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
     None
 */
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-void fill_buffer(char *pointer);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

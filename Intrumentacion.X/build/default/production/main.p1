@@ -17,15 +17,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "117 ./mcc_generated_files/eusart1.h
 [; ;./mcc_generated_files/eusart1.h: 117: void EUSART1_Initialize(void);
 [v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
-"131 ./mcc_generated_files/adcc.h
-[; ;./mcc_generated_files/adcc.h: 131: void ADCC_Initialize(void);
-[v _ADCC_Initialize `(v ~T0 @X0 0 ef ]
-"882
-[; ;./mcc_generated_files/adcc.h: 882: uint16_t* get_adc ();
-[v _get_adc `(*us ~T0 @X0 0 e? ]
-"507 ./mcc_generated_files/eusart1.h
-[; ;./mcc_generated_files/eusart1.h: 507: void fill_buffer(char *pointer);
-[v _fill_buffer `(v ~T0 @X0 0 ef1`*uc ]
 "110 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1409,8 +1400,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "68
 [; ;main.c: 68:     EUSART1_Initialize();
 [e ( _EUSART1_Initialize ..  ]
-[v F11013 `uc ~T0 @X0 -> 8 `i s ]
-[i F11013
+[v F11010 `uc ~T0 @X0 -> 8 `i s ]
+[i F11010
 :U ..
 "70
 [; ;main.c: 70:     uint8_t eusart1Buffer[8] = {'h','o','l','i','w','i','s','1'};
@@ -1425,7 +1416,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _eusart1Buffer `uc ~T0 @X0 -> 8 `i a ]
-[e = _eusart1Buffer F11013 ]
+[e = _eusart1Buffer F11010 ]
 "71
 [; ;main.c: 71:     uint16_t *ADC_result;
 [v _ADC_result `*us ~T0 @X0 1 a ]
@@ -1435,15 +1426,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "73
 [; ;main.c: 73:     {
 {
-"76
-[; ;main.c: 76:         ADCC_Initialize();
-[e ( _ADCC_Initialize ..  ]
-"78
-[; ;main.c: 78:         ADC_result= get_adc();
-[e = _ADC_result ( _get_adc ..  ]
-"81
-[; ;main.c: 81:         fill_buffer(eusart1Buffer);
-[e ( _fill_buffer (1 -> &U _eusart1Buffer `*uc ]
 "82
 [; ;main.c: 82:     }
 }

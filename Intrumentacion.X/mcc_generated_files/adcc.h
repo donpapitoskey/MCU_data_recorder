@@ -878,8 +878,6 @@ void ADCC_ISR(void);
     None
 */
 void ADCC_DefaultInterruptHandler(void);
-
-uint16_t* get_adc ();
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }

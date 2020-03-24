@@ -73,12 +73,12 @@ void main(void)
     {
         // Add your application code
         
-        ADCC_Initialize();
+        //ADCC_Initialize();
         
-        ADC_result= get_adc();
+        //ADC_result= get_adc();
         
         
-        fill_buffer(eusart1Buffer);
+        //fill_buffer(eusart1Buffer);
     }
 }
 /**

@@ -18302,8 +18302,6 @@ void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
 void ADCC_ISR(void);
 # 880 "mcc_generated_files/adcc.h"
 void ADCC_DefaultInterruptHandler(void);
-
-uint16_t* get_adc ();
 # 56 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
@@ -18342,7 +18340,7 @@ eusart1_status_t EUSART1_get_last_status(void);
 # 328 "mcc_generated_files/eusart1.h"
 uint8_t EUSART1_Read(void);
 # 348 "mcc_generated_files/eusart1.h"
-void EUSART1_Write(uint8_t *txData);
+void EUSART1_Write(char *txData);
 # 369 "mcc_generated_files/eusart1.h"
 void EUSART1_Transmit_ISR(void);
 # 390 "mcc_generated_files/eusart1.h"
@@ -18359,8 +18357,6 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-void fill_buffer(char *pointer);
 # 57 "mcc_generated_files/mcc.h" 2
 # 72 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);

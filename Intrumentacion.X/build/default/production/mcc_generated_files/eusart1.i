@@ -18215,7 +18215,7 @@ eusart1_status_t EUSART1_get_last_status(void);
 # 328 "mcc_generated_files/eusart1.h"
 uint8_t EUSART1_Read(void);
 # 348 "mcc_generated_files/eusart1.h"
-void EUSART1_Write(uint8_t *txData);
+void EUSART1_Write(char *txData);
 # 369 "mcc_generated_files/eusart1.h"
 void EUSART1_Transmit_ISR(void);
 # 390 "mcc_generated_files/eusart1.h"
@@ -18232,14 +18232,15 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-void fill_buffer(char *pointer);
 # 50 "mcc_generated_files/eusart1.c" 2
 # 62 "mcc_generated_files/eusart1.c"
 volatile uint8_t eusart1TxHead = 0;
 volatile uint8_t eusart1TxTail = 0;
-volatile uint8_t eusart1TxBuffer[22] = {0,0,0,0,0,0,0,0};
+volatile uint8_t eusart1TxBuffer[8];
 volatile uint8_t eusart1TxBufferRemaining;
+volatile char my_data = 0;
+
+char val[22] ={'k','0','0','h','o','l','a','m','u','n','d','k','0','0','h','o','l','a','m','u','n','d'};
 
 volatile uint8_t eusart1RxHead = 0;
 volatile uint8_t eusart1RxTail = 0;
@@ -18296,7 +18297,7 @@ void EUSART1_Initialize(void)
 
     eusart1TxHead = 0;
     eusart1TxTail = 0;
-    eusart1TxBufferRemaining = sizeof(eusart1TxBuffer);
+    eusart1TxBufferRemaining = sizeof(val);
 
     eusart1RxHead = 0;
     eusart1RxTail = 0;
@@ -18347,7 +18348,7 @@ uint8_t EUSART1_Read(void)
     return readValue;
 }
 
-void EUSART1_Write(uint8_t *txData)
+void EUSART1_Write(char *txData)
 {
     while(0 == eusart1TxBufferRemaining)
     {
@@ -18356,6 +18357,8 @@ void EUSART1_Write(uint8_t *txData)
     if(0 == PIE3bits.TX1IE)
     {
         TX1REG = *txData;
+        eusart1TxBufferRemaining=1;
+        eusart1TxTail++;
     }
     else
     {
@@ -18375,10 +18378,10 @@ void EUSART1_Transmit_ISR(void)
 {
 
 
-    if(sizeof(eusart1TxBuffer) > eusart1TxBufferRemaining)
+    if(sizeof(val) > eusart1TxBufferRemaining)
     {
-        TX1REG = eusart1TxBuffer[eusart1TxTail++];
-        if(sizeof(eusart1TxBuffer) <= eusart1TxTail)
+        TX1REG = val[eusart1TxTail++];
+        if(sizeof(val) <= eusart1TxTail)
         {
             eusart1TxTail = 0;
         }
@@ -18416,7 +18419,12 @@ void EUSART1_Receive_ISR(void)
 
 void EUSART1_RxDataHandler(void){
 
-    eusart1RxBuffer[eusart1RxHead++] = RC1REG;
+
+    my_data = RC1REG;
+
+    if(my_data == 'o'){
+        EUSART1_Write(val);
+    }
     if(sizeof(eusart1RxBuffer) <= eusart1RxHead)
     {
         eusart1RxHead = 0;
@@ -18456,12 +18464,4 @@ void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void)){
 
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void)){
     EUSART1_RxDefaultInterruptHandler = interruptHandler;
-}
-
-void fill_buffer(char *pointer){
-
-    for(char i=0;i<22;i++){
-        eusart1TxBuffer[i]= *(pointer+i);
-    }
-
 }

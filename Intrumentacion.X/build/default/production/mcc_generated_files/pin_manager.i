@@ -18116,14 +18116,14 @@ void PIN_MANAGER_Initialize(void)
 
 
     TRISA = 0x3F;
-    TRISB = 0x70;
-    TRISC = 0xEF;
+    TRISB = 0xF0;
+    TRISC = 0x6F;
 
 
 
 
-    ANSELC = 0xEF;
-    ANSELB = 0x50;
+    ANSELC = 0xAF;
+    ANSELB = 0x70;
     ANSELA = 0x37;
 
 
@@ -18154,8 +18154,8 @@ void PIN_MANAGER_Initialize(void)
     INLVLB = 0xF0;
     INLVLC = 0xFF;
 # 113 "mcc_generated_files/pin_manager.c"
-    RB7PPS = 0x0F;
-    RX1DTPPS = 0x0D;
+    RC7PPS = 0x0F;
+    RX1DTPPS = 0x16;
 }
 
 void PIN_MANAGER_IOC(void)

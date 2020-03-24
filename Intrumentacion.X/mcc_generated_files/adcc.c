@@ -56,7 +56,6 @@
   Section: ADCC Module Variables
 */
 void (*ADCC_ADI_InterruptHandler)(void);
-uint16_t ADvalue = 0xFF;
 
 /**
   Section: ADCC Module APIs
@@ -321,18 +320,7 @@ void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
 void ADCC_DefaultInterruptHandler(void){
     // add your ADCC interrupt custom code
     // or set custom function using ADCC_SetADIInterruptHandler() or ADCC_SetADTIInterruptHandler()
-    //aqui va codigo
-    
-    //leer adc 10 veces
-    //sacar media y Stddv
-    //ADvalue = valorvalido
-    
 }
-
-uint16_t* get_adc (){
-    return &ADvalue;
-}
-
 /**
  End of File
 */
