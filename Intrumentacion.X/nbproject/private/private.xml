@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/JuanJ/Documents/GitHub/crib/Intrumentacion.X/mcc_generated_files/eusart1.c</file>
+            <file>file:/C:/Users/JuanJ/Documents/GitHub/crib/Intrumentacion.X/mcc_generated_files/pin_manager.c</file>
+            <file>file:/C:/Users/JuanJ/Documents/GitHub/crib/Intrumentacion.X/mcc_generated_files/my_functions.h</file>
+            <file>file:/C:/Users/JuanJ/Documents/GitHub/crib/Intrumentacion.X/mcc_generated_files/eusart1.h</file>
+            <file>file:/C:/Users/JuanJ/Documents/GitHub/crib/Intrumentacion.X/mcc_generated_files/adcc.c</file>
+            <file>file:/C:/Users/JuanJ/Documents/GitHub/crib/Intrumentacion.X/mcc_generated_files/adcc.h</file>
+            <file>file:/C:/Users/JuanJ/Documents/GitHub/crib/Intrumentacion.X/mcc_generated_files/mcc.h</file>
+            <file>file:/C:/Users/JuanJ/Documents/GitHub/crib/Intrumentacion.X/main.c</file>
+            <file>file:/C:/Users/JuanJ/Documents/GitHub/crib/Intrumentacion.X/mcc_generated_files/pin_manager.h</file>
+        </group>
     </open-files>
 </project-private>

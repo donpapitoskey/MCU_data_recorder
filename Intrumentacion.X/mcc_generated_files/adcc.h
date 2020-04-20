@@ -878,6 +878,9 @@ void ADCC_ISR(void);
     None
 */
 void ADCC_DefaultInterruptHandler(void);
+
+void set_reciever(char state);
+
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }

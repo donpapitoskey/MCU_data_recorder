@@ -42,10 +42,24 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include <math.h>
 
 /*
                          Main application
  */
+typedef struct{
+    unsigned char h:1;
+    unsigned int i:1;
+}Vector;
+
+int ADC_good_value;
+char EUSART_recieved_val;
+char *my_pointer;
+char values[22] ={'h','1','0','h','o','l','a','m','u','n','d','o','0','0','h','o','l','a','m','u','n','t'};    
+char myVar=2;
+
+
+
 void main(void)
 {
     // initialize the device
@@ -66,21 +80,70 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
     EUSART1_Initialize();
+    ADCC_Initialize();
     
-    uint8_t eusart1Buffer[8] = {'h','o','l','i','w','i','s','1'};
-    uint16_t *ADC_result;
+    //uint8_t eusart1Buffer[8] = {'h','o','l','i','w','i','s','1'};
+    //uint16_t *ADC_result;
+    
+    
+    
+   
+    fill_buffer(values);
     while (1)
     {
         // Add your application code
         
-        //ADCC_Initialize();
+        if(EUSART_recieved_val == 'k'){
+            EUSART1_Write(values);
+            //ADCC_StartConversion(0);
+           /*PIN13_SetHigh();
+            __delay_ms(500);
+            PIN13_SetLow();
+            __delay_ms(500);
+            PIN12_SetHigh();
+            __delay_ms(500);
+            PIN12_SetLow();
+            __delay_ms(500);
+            PIN11_SetHigh();
+            __delay_ms(500);
+            PIN11_SetLow();
+            __delay_ms(500);  */  
+            EUSART_recieved_val =0;
+           
+        
+        }
+            
         
         //ADC_result= get_adc();
-        
-        
+    
+    
         //fill_buffer(eusart1Buffer);
     }
 }
+
+
 /**
  End of File
 */
+void vector_filler(char *my_pointer){
+    for(char i=0;i<10;i++){
+        *(my_pointer+2*i)=0;
+    }
+}
+
+
+
+void parity_calculator (char *mypointer){
+    //int parity;
+}
+
+
+
+void set_ADC_value(int value_ADCC){
+    ADC_good_value=value_ADCC;
+}
+
+
+void set_EUSART_value(char EUSART_val){
+    EUSART_recieved_val = EUSART_val;
+}

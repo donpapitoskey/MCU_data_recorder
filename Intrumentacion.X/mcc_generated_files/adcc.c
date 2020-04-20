@@ -51,6 +51,7 @@
 #include <xc.h>
 #include "adcc.h"
 #include "mcc.h"
+#include <math.h>
 
 /**
   Section: ADCC Module Variables
@@ -60,6 +61,10 @@ void (*ADCC_ADI_InterruptHandler)(void);
 /**
   Section: ADCC Module APIs
 */
+double mean=0;
+unsigned int ADvalues[10];
+char conversion_counter = 0;
+
 
 void ADCC_Initialize(void)
 {
@@ -320,7 +325,29 @@ void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
 void ADCC_DefaultInterruptHandler(void){
     // add your ADCC interrupt custom code
     // or set custom function using ADCC_SetADIInterruptHandler() or ADCC_SetADTIInterruptHandler()
+    if(conversion_counter<10){
+        ADvalues[conversion_counter] = (unsigned int)((ADRESH << 8) + ADRESL);
+        mean=mean +(float)ADvalues[conversion_counter];
+        conversion_counter++;
+        
+    }
+    else{
+        mean = mean/10;
+        double std_dev=0;
+        for(char i=0;i<0;i++){
+            std_dev=std_dev+pow((float)ADvalues[i]-mean,2);
+        }
+        std_dev=sqrt(std_dev/9);
+        if(std_dev<0.1){
+            set_ADC_value((int)mean);
+        }
+        conversion_counter=0;
+        mean=0;
+    }
+    
 }
+
+
 /**
  End of File
 */
