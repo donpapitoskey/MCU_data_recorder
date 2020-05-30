@@ -57,6 +57,7 @@
 */
 void (*ADCC_ADI_InterruptHandler)(void);
 
+char docon=0;
 /**
   Section: ADCC Module APIs
 */
@@ -102,6 +103,8 @@ void ADCC_Initialize(void)
     ADSTAT = 0x00;
     // ADNREF external; ADPREF external; 
     ADREF = 0x12;
+    // ADNREF internal; ADPREF internal; 
+    //ADREF = 0x00;
     // ADACT disabled; 
     ADACT = 0x00;
     // ADCS FOSC/8; 
@@ -121,7 +124,7 @@ void ADCC_Initialize(void)
 void ADCC_StartConversion(adcc_channel_t channel)
 {
     // select the A/D channel
-    ADPCH = channel;      
+    ADPCH = 16;      
   
     // Turn on the ADC module
     ADCON0bits.ADON = 1;
@@ -308,9 +311,18 @@ void ADCC_ISR(void)
 {
     // Clear the ADCC interrupt flag
     PIR1bits.ADIF = 0;
-
-    if (ADCC_ADI_InterruptHandler)
-            ADCC_ADI_InterruptHandler();
+    if(docon ==1){
+        LED_SetHigh();
+    
+        add_Buffer_val(ADRESH);
+        add_Buffer_val(ADRESL);
+    
+        LED_SetLow();
+        
+    }
+    
+    
+    
 }
 
 void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
@@ -320,6 +332,10 @@ void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
 void ADCC_DefaultInterruptHandler(void){
     // add your ADCC interrupt custom code
     // or set custom function using ADCC_SetADIInterruptHandler() or ADCC_SetADTIInterruptHandler()
+}
+
+void adc_one(char doit){
+    docon=doit;
 }
 /**
  End of File

@@ -504,6 +504,7 @@ void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 */
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 
+void add_Buffer_val(char ADC_char);
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }

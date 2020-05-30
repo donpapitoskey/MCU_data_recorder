@@ -18357,6 +18357,8 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "./mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+
+void add_Buffer_val(char ADC_char);
 # 57 "./mcc_generated_files/mcc.h" 2
 # 72 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
@@ -18365,11 +18367,7 @@ void OSCILLATOR_Initialize(void);
 # 98 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
-
-
-
-
-
+# 53 "main.c"
 void main(void)
 {
 
@@ -18393,8 +18391,10 @@ void main(void)
 
     uint8_t eusart1Buffer[8] = {'h','o','l','i','w','i','s','1'};
     uint16_t *ADC_result;
+
+    ADCC_Initialize();
     while (1)
     {
-# 82 "main.c"
+# 95 "main.c"
     }
 }

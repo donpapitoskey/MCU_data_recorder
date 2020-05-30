@@ -46,6 +46,10 @@
 /*
                          Main application
  */
+
+
+
+
 void main(void)
 {
     // initialize the device
@@ -69,11 +73,20 @@ void main(void)
     
     uint8_t eusart1Buffer[8] = {'h','o','l','i','w','i','s','1'};
     uint16_t *ADC_result;
+    
+    ADCC_Initialize();
     while (1)
     {
         // Add your application code
         
-        //ADCC_Initialize();
+        
+        
+        /*LED_SetHigh();
+        __delay_ms(500);
+        LED_SetLow();
+        __delay_ms(500);*/
+        
+        
         
         //ADC_result= get_adc();
         
@@ -81,6 +94,8 @@ void main(void)
         //fill_buffer(eusart1Buffer);
     }
 }
+
+
 /**
  End of File
 */

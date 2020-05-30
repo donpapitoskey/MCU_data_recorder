@@ -17,6 +17,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "117 ./mcc_generated_files/eusart1.h
 [; ;./mcc_generated_files/eusart1.h: 117: void EUSART1_Initialize(void);
 [v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
+"131 ./mcc_generated_files/adcc.h
+[; ;./mcc_generated_files/adcc.h: 131: void ADCC_Initialize(void);
+[v _ADCC_Initialize `(v ~T0 @X0 0 ef ]
 "110 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1380,31 +1383,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h: 32125: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49 main.c
-[; ;main.c: 49: void main(void)
+"53 main.c
+[; ;main.c: 53: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"50
-[; ;main.c: 50: {
+"54
+[; ;main.c: 54: {
 {
 [e :U _main ]
 [f ]
-"52
-[; ;main.c: 52:     SYSTEM_Initialize();
+"56
+[; ;main.c: 56:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"58
-[; ;main.c: 58:     (INTCONbits.GIE = 1);
+"62
+[; ;main.c: 62:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"61
-[; ;main.c: 61:     (INTCONbits.PEIE = 1);
+"65
+[; ;main.c: 65:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"68
-[; ;main.c: 68:     EUSART1_Initialize();
+"72
+[; ;main.c: 72:     EUSART1_Initialize();
 [e ( _EUSART1_Initialize ..  ]
-[v F11010 `uc ~T0 @X0 -> 8 `i s ]
-[i F11010
+[v F11012 `uc ~T0 @X0 -> 8 `i s ]
+[i F11012
 :U ..
-"70
-[; ;main.c: 70:     uint8_t eusart1Buffer[8] = {'h','o','l','i','w','i','s','1'};
+"74
+[; ;main.c: 74:     uint8_t eusart1Buffer[8] = {'h','o','l','i','w','i','s','1'};
 -> -> 104 `ui `uc
 -> -> 111 `ui `uc
 -> -> 108 `ui `uc
@@ -1416,23 +1419,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _eusart1Buffer `uc ~T0 @X0 -> 8 `i a ]
-[e = _eusart1Buffer F11010 ]
-"71
-[; ;main.c: 71:     uint16_t *ADC_result;
+[e = _eusart1Buffer F11012 ]
+"75
+[; ;main.c: 75:     uint16_t *ADC_result;
 [v _ADC_result `*us ~T0 @X0 1 a ]
-"72
-[; ;main.c: 72:     while (1)
+"77
+[; ;main.c: 77:     ADCC_Initialize();
+[e ( _ADCC_Initialize ..  ]
+"78
+[; ;main.c: 78:     while (1)
 [e :U 1521 ]
-"73
-[; ;main.c: 73:     {
+"79
+[; ;main.c: 79:     {
 {
-"82
-[; ;main.c: 82:     }
+"95
+[; ;main.c: 95:     }
 }
 [e :U 1520 ]
 [e $U 1521  ]
 [e :U 1522 ]
-"83
-[; ;main.c: 83: }
+"96
+[; ;main.c: 96: }
 [e :UE 1519 ]
 }

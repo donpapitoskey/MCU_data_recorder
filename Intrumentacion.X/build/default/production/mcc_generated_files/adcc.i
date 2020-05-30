@@ -18360,6 +18360,8 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+
+void add_Buffer_val(char ADC_char);
 # 57 "mcc_generated_files/mcc.h" 2
 # 72 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
@@ -18375,6 +18377,7 @@ void PMD_Initialize(void);
 
 void (*ADCC_ADI_InterruptHandler)(void);
 
+char docon=0;
 
 
 
@@ -18421,6 +18424,8 @@ void ADCC_Initialize(void)
 
     ADREF = 0x12;
 
+
+
     ADACT = 0x00;
 
     ADCLK = 0x03;
@@ -18439,7 +18444,7 @@ void ADCC_Initialize(void)
 void ADCC_StartConversion(adcc_channel_t channel)
 {
 
-    ADPCH = channel;
+    ADPCH = 16;
 
 
     ADCON0bits.ADON = 1;
@@ -18626,9 +18631,18 @@ void ADCC_ISR(void)
 {
 
     PIR1bits.ADIF = 0;
+    if(docon ==1){
+        do { LATCbits.LATC4 = 1; } while(0);
 
-    if (ADCC_ADI_InterruptHandler)
-            ADCC_ADI_InterruptHandler();
+        add_Buffer_val(ADRESH);
+        add_Buffer_val(ADRESL);
+
+        do { LATCbits.LATC4 = 0; } while(0);
+
+    }
+
+
+
 }
 
 void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
@@ -18638,4 +18652,8 @@ void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
 void ADCC_DefaultInterruptHandler(void){
 
 
+}
+
+void adc_one(char doit){
+    docon=doit;
 }

@@ -66,7 +66,7 @@ volatile uint8_t eusart1TxBufferRemaining;
 volatile char my_data = 0;
 
 char val[22] ={'k','0','0','h','o','l','a','m','u','n','d','k','0','0','h','o','l','a','m','u','n','d'};
-
+char buffer_filler = 1;
 volatile uint8_t eusart1RxHead = 0;
 volatile uint8_t eusart1RxTail = 0;
 volatile uint8_t eusart1RxBuffer[EUSART1_RX_BUFFER_SIZE];
@@ -87,6 +87,19 @@ void (*EUSART1_ErrorHandler)(void);
 void EUSART1_DefaultFramingErrorHandler(void);
 void EUSART1_DefaultOverrunErrorHandler(void);
 void EUSART1_DefaultErrorHandler(void);
+
+typedef enum
+{
+    V_signal =  0x10,
+    channel_Vss =  0x3B,
+    channel_Temp_Sensor =  0x3C,
+    channel_DAC1_Output =  0x3D,
+    channel_FVR_Buffer1 =  0x3E,
+    channel_FVR_Buffer2 =  0x3F
+} adcc_channel_t;
+
+void ADCC_StartConversion(adcc_channel_t channel);
+void adc_one(char doit);
 
 void EUSART1_Initialize(void)
 {
@@ -248,8 +261,15 @@ void EUSART1_RxDataHandler(void){
     my_data = RC1REG;
     
     if(my_data == 'o'){
-        EUSART1_Write(val);
+        ADCC_StartConversion(16);
+        adc_one(1);
+        
     }
+    if(my_data == 'k'){
+        EUSART1_Write(val);
+        
+    }
+    
     if(sizeof(eusart1RxBuffer) <= eusart1RxHead)
     {
         eusart1RxHead = 0;
@@ -290,6 +310,20 @@ void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void)){
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void)){
     EUSART1_RxDefaultInterruptHandler = interruptHandler;
 }
+
+void add_Buffer_val(char ADC_char){
+    val[buffer_filler]=ADC_char;
+    buffer_filler++;
+    
+    if(buffer_filler == 21){
+        adc_one(0);
+        buffer_filler =1;
+        EUSART1_Write(val);
+        
+    }
+}
 /**
   End of File
 */
+
+
