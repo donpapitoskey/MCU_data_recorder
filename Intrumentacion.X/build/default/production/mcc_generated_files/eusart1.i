@@ -18232,24 +18232,15 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-
-void fill_buffer(char *pointer);
-
-void set_EUSART_value(char EUSART_val);
 # 50 "mcc_generated_files/eusart1.c" 2
 # 62 "mcc_generated_files/eusart1.c"
 volatile uint8_t eusart1TxHead = 0;
 volatile uint8_t eusart1TxTail = 0;
-
+volatile uint8_t eusart1TxBuffer[8];
 volatile uint8_t eusart1TxBufferRemaining;
 volatile char my_data = 0;
-char *buffer_pointer;
-volatile uint8_t eusartTxTail = 0;
-char i;
 
-char eusartTxBuffer[22];
-
+char val[22] ={'k','0','0','h','o','l','a','m','u','n','d','k','0','0','h','o','l','a','m','u','n','d'};
 
 volatile uint8_t eusart1RxHead = 0;
 volatile uint8_t eusart1RxTail = 0;
@@ -18306,7 +18297,7 @@ void EUSART1_Initialize(void)
 
     eusart1TxHead = 0;
     eusart1TxTail = 0;
-    eusart1TxBufferRemaining = sizeof(eusartTxBuffer);
+    eusart1TxBufferRemaining = sizeof(val);
 
     eusart1RxHead = 0;
     eusart1RxTail = 0;
@@ -18367,14 +18358,13 @@ void EUSART1_Write(char *txData)
     {
         TX1REG = *txData;
         eusart1TxBufferRemaining=1;
-        eusartTxTail++;
-
+        eusart1TxTail++;
     }
     else
     {
         PIE3bits.TX1IE = 0;
-        eusartTxBuffer[eusart1TxHead++] = *txData;
-        if(sizeof(eusartTxBuffer) <= eusart1TxHead)
+        eusart1TxBuffer[eusart1TxHead++] = *txData;
+        if(sizeof(eusart1TxBuffer) <= eusart1TxHead)
         {
             eusart1TxHead = 0;
         }
@@ -18388,20 +18378,18 @@ void EUSART1_Transmit_ISR(void)
 {
 
 
-    if(sizeof(eusartTxBuffer) > eusart1TxBufferRemaining)
+    if(sizeof(val) > eusart1TxBufferRemaining)
     {
-        TX1REG = eusartTxBuffer[eusartTxTail++];
-        if(sizeof(eusartTxBuffer) <= eusartTxTail)
+        TX1REG = val[eusart1TxTail++];
+        if(sizeof(val) <= eusart1TxTail)
         {
-            eusartTxTail = 0;
+            eusart1TxTail = 0;
         }
         eusart1TxBufferRemaining++;
     }
     else
     {
         PIE3bits.TX1IE = 0;
-        eusart1TxBufferRemaining=1;
-        eusartTxTail = 0;
     }
 }
 
@@ -18434,8 +18422,9 @@ void EUSART1_RxDataHandler(void){
 
     my_data = RC1REG;
 
-    set_EUSART_value(my_data);
-
+    if(my_data == 'o'){
+        EUSART1_Write(val);
+    }
     if(sizeof(eusart1RxBuffer) <= eusart1RxHead)
     {
         eusart1RxHead = 0;
@@ -18475,16 +18464,4 @@ void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void)){
 
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void)){
     EUSART1_RxDefaultInterruptHandler = interruptHandler;
-}
-
-void fill_buffer(char *pointer){
-
-
-
-
-    for(i=0;i<22;i++){
-        eusartTxBuffer[i]= *(pointer+i);
-    }
-
-
 }

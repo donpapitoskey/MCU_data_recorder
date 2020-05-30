@@ -504,11 +504,6 @@ void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 */
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-
-void fill_buffer(char *pointer);
-
-void set_EUSART_value(char EUSART_val);
-
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }

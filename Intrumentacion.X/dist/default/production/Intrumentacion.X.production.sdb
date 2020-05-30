@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F18446 ]
 [d frameptr 6 ]
-"126 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"121 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [e E10896 . `uc
 V_signal 16
 channel_Vss 59
@@ -12,80 +12,50 @@ channel_DAC1_Output 61
 channel_FVR_Buffer1 62
 channel_FVR_Buffer2 63
 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fabsf.c
-[v _fabsf fabsf `(f  1 e 4 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
-[v ___flneg __flneg `(d  1 e 4 0 ]
-"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nanf.c
-[v _nanf nanf `(f  1 e 4 0 ]
-"52 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\powf.c
-[v _powf powf `JJ(f  1 e 4 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\scalbnf.c
-[v _scalbnf scalbnf `(f  1 e 4 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"242
-[v ___flsub __flsub `(d  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
-"22 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sqrtf.c
-[v _sqrtf sqrtf `(f  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"63 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
+"49 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"142
-[v _set_ADC_value set_ADC_value `(v  1 e 1 0 ]
-"147
-[v _set_EUSART_value set_EUSART_value `(v  1 e 1 0 ]
-"69 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"64 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
-"312
+"307
 [v _ADCC_ISR ADCC_ISR `(v  1 e 1 0 ]
-"321
+"316
 [v _ADCC_SetADIInterruptHandler ADCC_SetADIInterruptHandler `(v  1 e 1 0 ]
-"325
+"320
 [v _ADCC_DefaultInterruptHandler ADCC_DefaultInterruptHandler `(v  1 e 1 0 ]
-"95 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
+"91 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
-"180
+"176
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-"207
+"202
 [v _EUSART1_Transmit_ISR EUSART1_Transmit_ISR `(v  1 e 1 0 ]
-"228
+"221
 [v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]
-"252
+"245
 [v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
-"266
+"260
 [v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
-"268
+"262
 [v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
-"276
+"270
 [v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
-"280
+"274
 [v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
-"284
+"278
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
-"288
+"282
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
-"292
+"286
 [v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
-"296
+"290
 [v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
-"300
-[v _fill_buffer fill_buffer `(v  1 e 1 0 ]
 "52 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/mcc.c
@@ -96,14 +66,14 @@ channel_FVR_Buffer2 63
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "55 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-[s S749 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S719 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "426 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h
-[u S754 . 1 `S749 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES754  1 e 1 @11 ]
+[u S724 . 1 `S719 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES724  1 e 1 @11 ]
 "597
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
 "647
@@ -339,7 +309,7 @@ channel_FVR_Buffer2 63
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
 "5281
 [v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
-[s S627 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S605 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -349,11 +319,11 @@ channel_FVR_Buffer2 63
 `uc 1 SPEN 1 0 :1:7 
 ]
 "5307
-[u S636 . 1 `S627 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES636  1 e 1 @285 ]
+[u S614 . 1 `S605 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES614  1 e 1 @285 ]
 "5461
 [v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
-[s S605 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S583 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -363,8 +333,8 @@ channel_FVR_Buffer2 63
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5487
-[u S614 . 1 `S605 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES614  1 e 1 @286 ]
+[u S592 . 1 `S583 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES592  1 e 1 @286 ]
 "5641
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
 [s S45 . 1 `uc 1 ADIF 1 0 :1:0 
@@ -376,7 +346,7 @@ channel_FVR_Buffer2 63
 "19054
 [u S51 . 1 `S45 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES51  1 e 1 @1805 ]
-[s S772 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[s S742 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -384,8 +354,8 @@ channel_FVR_Buffer2 63
 `uc 1 RC1IF 1 0 :1:5 
 ]
 "19127
-[u S779 . 1 `S772 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES779  1 e 1 @1807 ]
+[u S749 . 1 `S742 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES749  1 e 1 @1807 ]
 [s S60 . 1 `uc 1 ADIE 1 0 :1:0 
 `uc 1 ADTIE 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
@@ -395,7 +365,7 @@ channel_FVR_Buffer2 63
 "19425
 [u S66 . 1 `S60 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES66  1 e 1 @1815 ]
-[s S533 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[s S511 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -403,8 +373,8 @@ channel_FVR_Buffer2 63
 `uc 1 RC1IE 1 0 :1:5 
 ]
 "19498
-[u S540 . 1 `S533 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES540  1 e 1 @1817 ]
+[u S518 . 1 `S511 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES518  1 e 1 @1817 ]
 "19758
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "19803
@@ -465,83 +435,56 @@ channel_FVR_Buffer2 63
 [v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
 "31594
 [v _INLVLC INLVLC `VEuc  1 e 1 @8018 ]
-"3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\errno.c
-[v _errno errno `i  1 e 2 0 ]
-"19 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\powf.c
-[v _bp bp `DC[2]f  1 s 8 bp ]
-"20
-[v _dp_h dp_h `DC[2]f  1 s 8 dp_h ]
-"21
-[v _dp_l dp_l `DC[2]f  1 s 8 dp_l ]
-"55 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
-[v _ADC_good_value ADC_good_value `i  1 e 2 0 ]
-"56
-[v _EUSART_recieved_val EUSART_recieved_val `uc  1 e 1 0 ]
-"58
-[v _values values `[22]uc  1 e 22 0 ]
-"59 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"58 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [v _ADCC_ADI_InterruptHandler ADCC_ADI_InterruptHandler `*.37(v  1 e 2 0 ]
-"64
-[v _mean mean `d  1 e 4 0 ]
-"65
-[v _ADvalues ADvalues `[10]ui  1 e 20 0 ]
-"66
-[v _conversion_counter conversion_counter `uc  1 e 1 0 ]
 "62 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
 [v _eusart1TxHead eusart1TxHead `VEuc  1 e 1 0 ]
 "63
 [v _eusart1TxTail eusart1TxTail `VEuc  1 e 1 0 ]
+"64
+[v _eusart1TxBuffer eusart1TxBuffer `VE[8]uc  1 e 8 0 ]
 "65
 [v _eusart1TxBufferRemaining eusart1TxBufferRemaining `VEuc  1 e 1 0 ]
 "66
 [v _my_data my_data `VEuc  1 e 1 0 ]
 "68
-[v _eusartTxTail eusartTxTail `VEuc  1 e 1 0 ]
-"69
-[v _i i `uc  1 e 1 0 ]
-"71
-[v _eusartTxBuffer eusartTxBuffer `[22]uc  1 e 22 0 ]
-"74
+[v _val val `[22]uc  1 e 22 0 ]
+"70
 [v _eusart1RxHead eusart1RxHead `VEuc  1 e 1 0 ]
-"75
+"71
 [v _eusart1RxTail eusart1RxTail `VEuc  1 e 1 0 ]
-"76
+"72
 [v _eusart1RxBuffer eusart1RxBuffer `VE[8]uc  1 e 8 0 ]
-[s S520 . 1 `uc 1 perr 1 0 :1:0 
+[s S498 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
-"77
-[u S525 . 1 `S520 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S525  1 e 8 0 ]
-"78
+"73
+[u S503 . 1 `S498 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S503  1 e 8 0 ]
+"74
 [v _eusart1RxCount eusart1RxCount `VEuc  1 e 1 0 ]
-"79
-[v _eusart1RxLastError eusart1RxLastError `VES525  1 e 1 0 ]
-"84
+"75
+[v _eusart1RxLastError eusart1RxLastError `VES503  1 e 1 0 ]
+"80
 [v _EUSART1_TxDefaultInterruptHandler EUSART1_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
-"85
+"81
 [v _EUSART1_RxDefaultInterruptHandler EUSART1_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
-"87
+"83
 [v _EUSART1_FramingErrorHandler EUSART1_FramingErrorHandler `*.37(v  1 e 2 0 ]
-"88
+"84
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
-"89
+"85
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"63 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
+"49 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"122
-} 0
-"300 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
-[v _fill_buffer fill_buffer `(v  1 e 1 0 ]
-{
-[v fill_buffer@pointer pointer `*.6uc  1 a 1 wreg ]
-[v fill_buffer@pointer pointer `*.6uc  1 a 1 wreg ]
-"305
-[v fill_buffer@pointer pointer `*.6uc  1 a 1 2 ]
-"310
+"70
+[v main@eusart1Buffer eusart1Buffer `[8]uc  1 a 8 3 ]
+"68
+[v main@F11010 F11010 `[8]uc  1 s 8 F11010 ]
+"83
 } 0
 "50 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -563,359 +506,101 @@ channel_FVR_Buffer2 63
 {
 "71
 } 0
-"95 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
+"91 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
 {
-"137
+"133
 } 0
-"292
+"286
 [v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"294
+"288
 } 0
-"296
+"290
 [v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"298
+"292
 } 0
-"284
+"278
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"286
-} 0
 "280
+} 0
+"274
 [v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"282
+"276
 } 0
-"288
+"282
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"290
+"284
 } 0
-"69 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"64 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 {
-"124
+"119
 } 0
-"321
+"316
 [v _ADCC_SetADIInterruptHandler ADCC_SetADIInterruptHandler `(v  1 e 1 0 ]
 {
 [v ADCC_SetADIInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"323
-} 0
-"180 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-{
-[v EUSART1_Write@txData txData `*.6uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `*.6uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `*.6uc  1 a 1 1 ]
-"204
+"318
 } 0
 "52 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
 "78
 } 0
-"207 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
+"202 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Transmit_ISR EUSART1_Transmit_ISR `(v  1 e 1 0 ]
 {
-"226
+"219
 } 0
-"228
+"221
 [v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]
 {
-"250
+"243
 } 0
-"268
+"262
 [v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
 {
-"274
+"268
 } 0
-"266
+"260
 [v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
 {
 } 0
-"276
+"270
 [v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
 {
-"278
+"272
 } 0
-"252
+"245
 [v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
 {
-"264
+"258
 } 0
-"147 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
-[v _set_EUSART_value set_EUSART_value `(v  1 e 1 0 ]
+"176
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
 {
-[v set_EUSART_value@EUSART_val EUSART_val `uc  1 a 1 wreg ]
-[v set_EUSART_value@EUSART_val EUSART_val `uc  1 a 1 wreg ]
-[v set_EUSART_value@EUSART_val EUSART_val `uc  1 a 1 1 ]
-"149
+[v EUSART1_Write@txData txData `*.4uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `*.4uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `*.4uc  1 a 1 1 ]
+"199
 } 0
-"312 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"307 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [v _ADCC_ISR ADCC_ISR `(v  1 e 1 0 ]
 {
-"319
+"314
 } 0
-"325
+"320
 [v _ADCC_DefaultInterruptHandler ADCC_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"336
-[v ADCC_DefaultInterruptHandler@std_dev std_dev `d  1 a 4 29 ]
-"348
-} 0
-"142 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
-[v _set_ADC_value set_ADC_value `(v  1 e 1 0 ]
-{
-[v set_ADC_value@value_ADCC value_ADCC `i  1 p 2 11 ]
-"144
-} 0
-"52 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\powf.c
-[v _powf powf `JJ(f  1 e 4 0 ]
-{
-"151
-[v powf@s2 s2 `f  1 a 4 52 ]
-[v powf@s_h s_h `f  1 a 4 20 ]
-[v powf@t_h t_h `f  1 a 4 16 ]
-[v powf@t_l t_l `f  1 a 4 44 ]
-[v powf@s_l s_l `f  1 a 4 40 ]
-[u S1349 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"58
-[v powf@__xc8_float_word __xc8_float_word `S1349  1 a 4 16 ]
-"54
-[v powf@z z `f  1 a 4 12 ]
-"55
-[v powf@t t `f  1 a 4 8 ]
-"56
-[v powf@j j `l  1 a 4 4 ]
-"57
-[v powf@ix ix `l  1 a 4 0 ]
-"56
-[v powf@k k `l  1 a 4 72 ]
-"54
-[v powf@p_h p_h `f  1 a 4 68 ]
-"57
-[v powf@is is `l  1 a 4 60 ]
-[v powf@iy iy `l  1 a 4 56 ]
-"56
-[v powf@n n `l  1 a 4 48 ]
-"55
-[v powf@sn sn `f  1 a 4 44 ]
-[v powf@t1 t1 `f  1 a 4 40 ]
-"57
-[v powf@hy hy `l  1 a 4 36 ]
-"55
-[v powf@v v `f  1 a 4 32 ]
-[v powf@u u `f  1 a 4 28 ]
-"54
-[v powf@ax ax `f  1 a 4 24 ]
-[v powf@p_l p_l `f  1 a 4 12 ]
-"57
-[v powf@hx hx `l  1 a 4 8 ]
-"55
-[v powf@s s `f  1 a 4 0 ]
-"56
-[v powf@yisint yisint `l  1 a 4 72 ]
-"55
-[v powf@r r `f  1 a 4 68 ]
-[v powf@w w `f  1 a 4 60 ]
-"56
-[v powf@i i `l  1 a 4 36 ]
-"55
-[v powf@y1 y1 `f  1 a 4 32 ]
-"54
-[v powf@z_l z_l `f  1 a 4 28 ]
-[v powf@z_h z_h `f  1 a 4 24 ]
-"55
-[v powf@t2 t2 `f  1 a 4 20 ]
-"52
-[v powf@x x `f  1 p 4 52 ]
-[v powf@y y `f  1 p 4 56 ]
-"264
-} 0
-"22 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sqrtf.c
-[v _sqrtf sqrtf `(f  1 e 4 0 ]
-{
-"26
-[v sqrtf@ix ix `l  1 a 4 48 ]
-"27
-[v sqrtf@r r `ul  1 a 4 44 ]
-"26
-[v sqrtf@m m `l  1 a 4 40 ]
-"24
-[v sqrtf@z z `f  1 a 4 36 ]
-"26
-[v sqrtf@t t `l  1 a 4 32 ]
-[v sqrtf@q q `l  1 a 4 28 ]
-[u S1349 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"28
-[v sqrtf@__xc8_float_word __xc8_float_word `S1349  1 a 4 24 ]
-"26
-[v sqrtf@i i `l  1 a 4 20 ]
-[v sqrtf@s s `l  1 a 4 16 ]
-"22
-[v sqrtf@x x `f  1 p 4 0 ]
-"89
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nanf.c
-[v _nanf nanf `(f  1 e 4 0 ]
-{
-[u S1349 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"6
-[v nanf@u u `S1349  1 a 4 4 ]
-"4
-[v nanf@s s `*.25DCuc  1 p 2 0 ]
-"9
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-{
-[v ___flge@ff1 ff1 `d  1 p 4 54 ]
-[v ___flge@ff2 ff2 `d  1 p 4 58 ]
-"19
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\scalbnf.c
-[v _scalbnf scalbnf `(f  1 e 4 0 ]
-{
-"7
-[v scalbnf@y y `f  1 a 4 62 ]
-[u S1349 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"6
-[v scalbnf@u u `S1349  1 a 4 58 ]
-"4
-[v scalbnf@x x `f  1 p 4 46 ]
-[v scalbnf@n n `i  1 p 2 50 ]
-"31
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
-{
-[s S1207 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-"13
-[s S1212 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S1215 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1207 1 fAsBytes 4 0 `S1212 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1215  1 a 4 40 ]
-"12
-[v ___flmul@grs grs `ul  1 a 4 36 ]
-[s S1284 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-"14
-[u S1287 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1284 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1287  1 a 2 44 ]
-"10
-[v ___flmul@bexp bexp `uc  1 a 1 35 ]
-"11
-[v ___flmul@aexp aexp `uc  1 a 1 34 ]
-"9
-[v ___flmul@sign sign `uc  1 a 1 33 ]
-"8
-[v ___flmul@b b `d  1 p 4 20 ]
-[v ___flmul@a a `d  1 p 4 24 ]
-"205
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
-[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-{
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-"6
-[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
-"5
-[v __Umul8_16@product product `ui  1 a 2 4 ]
-"4
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
-"60
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fabsf.c
-[v _fabsf fabsf `(f  1 e 4 0 ]
-{
-[u S1349 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"6
-[v fabsf@u u `S1349  1 a 4 4 ]
-"4
-[v fabsf@x x `f  1 p 4 0 ]
-"5
-[v fabsf@F463 F463 `S1349  1 s 4 F463 ]
-"9
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 10 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 9 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 0 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 8 ]
-"44
-} 0
-"242 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-[v ___flsub __flsub `(d  1 e 4 0 ]
-{
-[v ___flsub@a a `d  1 p 4 46 ]
-[v ___flsub@b b `d  1 p 4 50 ]
-"250
-} 0
-"10
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 19 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 18 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 17 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 16 ]
-"10
-[v ___fladd@b b `d  1 p 4 0 ]
-[v ___fladd@a a `d  1 p 4 4 ]
-"237
-} 0
-"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
-[v ___flneg __flneg `(d  1 e 4 0 ]
-{
-[v ___flneg@f1 f1 `d  1 p 4 0 ]
-"20
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 74 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 67 ]
-"20
-[v ___fldiv@new_exp new_exp `i  1 a 2 72 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 79 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 78 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 71 ]
-"8
-[v ___fldiv@a a `d  1 p 4 54 ]
-[v ___fldiv@b b `d  1 p 4 58 ]
-"185
-} 0
-"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 0 ]
-"70
+"323
 } 0

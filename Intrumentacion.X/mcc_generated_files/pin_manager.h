@@ -89,66 +89,6 @@
 #define RA2_SetAnalogMode()         do { ANSELAbits.ANSA2 = 1; } while(0)
 #define RA2_SetDigitalMode()        do { ANSELAbits.ANSA2 = 0; } while(0)
 
-// get/set PIN13 aliases
-#define PIN13_TRIS                 TRISBbits.TRISB4
-#define PIN13_LAT                  LATBbits.LATB4
-#define PIN13_PORT                 PORTBbits.RB4
-#define PIN13_WPU                  WPUBbits.WPUB4
-#define PIN13_OD                   ODCONBbits.ODCB4
-#define PIN13_ANS                  ANSELBbits.ANSB4
-#define PIN13_SetHigh()            do { LATBbits.LATB4 = 1; } while(0)
-#define PIN13_SetLow()             do { LATBbits.LATB4 = 0; } while(0)
-#define PIN13_Toggle()             do { LATBbits.LATB4 = ~LATBbits.LATB4; } while(0)
-#define PIN13_GetValue()           PORTBbits.RB4
-#define PIN13_SetDigitalInput()    do { TRISBbits.TRISB4 = 1; } while(0)
-#define PIN13_SetDigitalOutput()   do { TRISBbits.TRISB4 = 0; } while(0)
-#define PIN13_SetPullup()          do { WPUBbits.WPUB4 = 1; } while(0)
-#define PIN13_ResetPullup()        do { WPUBbits.WPUB4 = 0; } while(0)
-#define PIN13_SetPushPull()        do { ODCONBbits.ODCB4 = 0; } while(0)
-#define PIN13_SetOpenDrain()       do { ODCONBbits.ODCB4 = 1; } while(0)
-#define PIN13_SetAnalogMode()      do { ANSELBbits.ANSB4 = 1; } while(0)
-#define PIN13_SetDigitalMode()     do { ANSELBbits.ANSB4 = 0; } while(0)
-
-// get/set PIN12 aliases
-#define PIN12_TRIS                 TRISBbits.TRISB5
-#define PIN12_LAT                  LATBbits.LATB5
-#define PIN12_PORT                 PORTBbits.RB5
-#define PIN12_WPU                  WPUBbits.WPUB5
-#define PIN12_OD                   ODCONBbits.ODCB5
-#define PIN12_ANS                  ANSELBbits.ANSB5
-#define PIN12_SetHigh()            do { LATBbits.LATB5 = 1; } while(0)
-#define PIN12_SetLow()             do { LATBbits.LATB5 = 0; } while(0)
-#define PIN12_Toggle()             do { LATBbits.LATB5 = ~LATBbits.LATB5; } while(0)
-#define PIN12_GetValue()           PORTBbits.RB5
-#define PIN12_SetDigitalInput()    do { TRISBbits.TRISB5 = 1; } while(0)
-#define PIN12_SetDigitalOutput()   do { TRISBbits.TRISB5 = 0; } while(0)
-#define PIN12_SetPullup()          do { WPUBbits.WPUB5 = 1; } while(0)
-#define PIN12_ResetPullup()        do { WPUBbits.WPUB5 = 0; } while(0)
-#define PIN12_SetPushPull()        do { ODCONBbits.ODCB5 = 0; } while(0)
-#define PIN12_SetOpenDrain()       do { ODCONBbits.ODCB5 = 1; } while(0)
-#define PIN12_SetAnalogMode()      do { ANSELBbits.ANSB5 = 1; } while(0)
-#define PIN12_SetDigitalMode()     do { ANSELBbits.ANSB5 = 0; } while(0)
-
-// get/set PIN11 aliases
-#define PIN11_TRIS                 TRISBbits.TRISB6
-#define PIN11_LAT                  LATBbits.LATB6
-#define PIN11_PORT                 PORTBbits.RB6
-#define PIN11_WPU                  WPUBbits.WPUB6
-#define PIN11_OD                   ODCONBbits.ODCB6
-#define PIN11_ANS                  ANSELBbits.ANSB6
-#define PIN11_SetHigh()            do { LATBbits.LATB6 = 1; } while(0)
-#define PIN11_SetLow()             do { LATBbits.LATB6 = 0; } while(0)
-#define PIN11_Toggle()             do { LATBbits.LATB6 = ~LATBbits.LATB6; } while(0)
-#define PIN11_GetValue()           PORTBbits.RB6
-#define PIN11_SetDigitalInput()    do { TRISBbits.TRISB6 = 1; } while(0)
-#define PIN11_SetDigitalOutput()   do { TRISBbits.TRISB6 = 0; } while(0)
-#define PIN11_SetPullup()          do { WPUBbits.WPUB6 = 1; } while(0)
-#define PIN11_ResetPullup()        do { WPUBbits.WPUB6 = 0; } while(0)
-#define PIN11_SetPushPull()        do { ODCONBbits.ODCB6 = 0; } while(0)
-#define PIN11_SetOpenDrain()       do { ODCONBbits.ODCB6 = 1; } while(0)
-#define PIN11_SetAnalogMode()      do { ANSELBbits.ANSB6 = 1; } while(0)
-#define PIN11_SetDigitalMode()     do { ANSELBbits.ANSB6 = 0; } while(0)
-
 // get/set V_signal aliases
 #define V_signal_TRIS                 TRISCbits.TRISC0
 #define V_signal_LAT                  LATCbits.LATC0

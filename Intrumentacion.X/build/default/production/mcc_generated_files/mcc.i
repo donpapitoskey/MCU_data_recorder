@@ -18097,9 +18097,9 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 226 "mcc_generated_files/pin_manager.h"
+# 166 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 238 "mcc_generated_files/pin_manager.h"
+# 178 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -18224,13 +18224,8 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/my_functions.h" 1
-# 74 "mcc_generated_files/my_functions.h"
-    void set_ADC_value(int value_ADCC);
-# 55 "mcc_generated_files/mcc.h" 2
-
 # 1 "mcc_generated_files/interrupt_manager.h" 1
-# 56 "mcc_generated_files/mcc.h" 2
+# 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adcc.h" 1
 # 72 "mcc_generated_files/adcc.h"
@@ -18307,9 +18302,7 @@ void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
 void ADCC_ISR(void);
 # 880 "mcc_generated_files/adcc.h"
 void ADCC_DefaultInterruptHandler(void);
-
-void set_reciever(char state);
-# 57 "mcc_generated_files/mcc.h" 2
+# 56 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
 # 75 "mcc_generated_files/eusart1.h"
@@ -18364,17 +18357,12 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-
-void fill_buffer(char *pointer);
-
-void set_EUSART_value(char EUSART_val);
-# 58 "mcc_generated_files/mcc.h" 2
-# 73 "mcc_generated_files/mcc.h"
+# 57 "mcc_generated_files/mcc.h" 2
+# 72 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 86 "mcc_generated_files/mcc.h"
+# 85 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 99 "mcc_generated_files/mcc.h"
+# 98 "mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 

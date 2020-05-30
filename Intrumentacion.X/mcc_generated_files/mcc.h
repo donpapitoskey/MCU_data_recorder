@@ -52,7 +52,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <conio.h>
-#include "my_functions.h"
 #include "interrupt_manager.h"
 #include "adcc.h"
 #include "eusart1.h"
