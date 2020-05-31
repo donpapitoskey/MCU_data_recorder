@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F18446 ]
 [d frameptr 6 ]
-"124 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"138 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [e E10896 . `uc
 V_signal 16
 channel_Vss 59
@@ -21,27 +21,55 @@ channel_DAC1_Output 61
 channel_FVR_Buffer1 62
 channel_FVR_Buffer2 63
 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fabsf.c
+[v _fabsf fabsf `(f  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nanf.c
+[v _nanf nanf `(f  1 e 4 0 ]
+"52 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\powf.c
+[v _powf powf `JJ(f  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\scalbnf.c
+[v _scalbnf scalbnf `(f  1 e 4 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"242
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"22 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sqrtf.c
+[v _sqrtf sqrtf `(f  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"53 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
+"67 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"65 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"112
+[v _value_approved value_approved `(v  1 e 1 0 ]
+"127
+[v _parity_check parity_check `(i  1 e 2 0 ]
+"79 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
-"124
+"138
 [v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
-"310
+"324
 [v _ADCC_ISR ADCC_ISR `(v  1 e 1 0 ]
-"328
+"376
 [v _ADCC_SetADIInterruptHandler ADCC_SetADIInterruptHandler `(v  1 e 1 0 ]
-"332
+"380
 [v _ADCC_DefaultInterruptHandler ADCC_DefaultInterruptHandler `(v  1 e 1 0 ]
-"337
+"385
 [v _adc_one adc_one `(v  1 e 1 0 ]
 "104 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
@@ -53,23 +81,23 @@ channel_FVR_Buffer2 63
 [v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]
 "258
 [v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
-"280
+"284
 [v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
-"282
+"286
 [v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
-"290
-[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
 "294
-[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
 "298
-[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
 "302
-[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
 "306
-[v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
 "310
-[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
+[v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
 "314
+[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
+"318
 [v _add_Buffer_val add_Buffer_val `(v  1 e 1 0 ]
 "52 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -81,14 +109,14 @@ channel_FVR_Buffer2 63
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "55 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-[s S764 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S799 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "426 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h
-[u S769 . 1 `S764 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES769  1 e 1 @11 ]
+[u S804 . 1 `S799 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES804  1 e 1 @11 ]
 "597
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
 "647
@@ -101,7 +129,7 @@ channel_FVR_Buffer2 63
 [v _LATB LATB `VEuc  1 e 1 @25 ]
 "837
 [v _LATC LATC `VEuc  1 e 1 @26 ]
-[s S400 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S403 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -111,8 +139,8 @@ channel_FVR_Buffer2 63
 `uc 1 LATC7 1 0 :1:7 
 ]
 "854
-[u S409 . 1 `S400 1 . 1 0 ]
-[v _LATCbits LATCbits `VES409  1 e 1 @26 ]
+[u S412 . 1 `S403 1 . 1 0 ]
+[v _LATCbits LATCbits `VES412  1 e 1 @26 ]
 "906
 [v _ADLTHL ADLTHL `VEuc  1 e 1 @140 ]
 "1034
@@ -165,7 +193,7 @@ channel_FVR_Buffer2 63
 [v _ADPREH ADPREH `VEuc  1 e 1 @272 ]
 "4031
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @273 ]
-[s S92 . 1 `uc 1 GO 1 0 :1:0 
+[s S95 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM 1 0 :2:2 
 `uc 1 CS 1 0 :1:4 
@@ -174,7 +202,7 @@ channel_FVR_Buffer2 63
 `uc 1 ON 1 0 :1:7 
 ]
 "4072
-[s S100 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S103 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :2:2 
 `uc 1 ADCS 1 0 :1:4 
@@ -182,24 +210,24 @@ channel_FVR_Buffer2 63
 `uc 1 ADCONT 1 0 :1:6 
 `uc 1 ADON 1 0 :1:7 
 ]
-[s S108 . 1 `uc 1 DONE 1 0 :1:0 
+[s S111 . 1 `uc 1 DONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM0 1 0 :1:2 
 `uc 1 FM1 1 0 :1:3 
 ]
-[s S113 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S116 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 `uc 1 ADFM1 1 0 :1:3 
 ]
-[s S118 . 1 `uc 1 . 1 0 :7:0 
+[s S121 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 ADCAL 1 0 :1:7 
 ]
-[u S121 . 1 `S92 1 . 1 0 `S100 1 . 1 0 `S108 1 . 1 0 `S113 1 . 1 0 `S118 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES121  1 e 1 @273 ]
+[u S124 . 1 `S95 1 . 1 0 `S103 1 . 1 0 `S111 1 . 1 0 `S116 1 . 1 0 `S121 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES124  1 e 1 @273 ]
 "4162
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @274 ]
-[s S353 . 1 `uc 1 DSEN 1 0 :1:0 
+[s S356 . 1 `uc 1 DSEN 1 0 :1:0 
 `uc 1 . 1 0 :2:1 
 `uc 1 GBOE 1 0 :1:3 
 `uc 1 GAOE 1 0 :1:4 
@@ -208,7 +236,7 @@ channel_FVR_Buffer2 63
 `uc 1 PPOL 1 0 :1:7 
 ]
 "4193
-[s S361 . 1 `uc 1 ADDSEN 1 0 :1:0 
+[s S364 . 1 `uc 1 ADDSEN 1 0 :1:0 
 `uc 1 . 1 0 :2:1 
 `uc 1 ADGBOE 1 0 :1:3 
 `uc 1 ADGAOE 1 0 :1:4 
@@ -216,22 +244,22 @@ channel_FVR_Buffer2 63
 `uc 1 ADIPEN 1 0 :1:6 
 `uc 1 ADPPOL 1 0 :1:7 
 ]
-[s S369 . 1 `uc 1 . 1 0 :3:0 
+[s S372 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CHSN3 1 0 :1:3 
 `uc 1 VCFG01 1 0 :1:4 
 `uc 1 VCFG11 1 0 :1:5 
 ]
-[u S374 . 1 `S353 1 . 1 0 `S361 1 . 1 0 `S369 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES374  1 e 1 @274 ]
+[u S377 . 1 `S356 1 . 1 0 `S364 1 . 1 0 `S372 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES377  1 e 1 @274 ]
 "4273
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @275 ]
-[s S214 . 1 `uc 1 MODE 1 0 :3:0 
+[s S217 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 ACLR 1 0 :1:3 
 `uc 1 CRS 1 0 :3:4 
 `uc 1 PSIS 1 0 :1:7 
 ]
 "4321
-[s S219 . 1 `uc 1 ADMD0 1 0 :1:0 
+[s S222 . 1 `uc 1 ADMD0 1 0 :1:0 
 `uc 1 ADMD1 1 0 :1:1 
 `uc 1 ADMD2 1 0 :1:2 
 `uc 1 ADACLR 1 0 :1:3 
@@ -240,11 +268,11 @@ channel_FVR_Buffer2 63
 `uc 1 ADCRS2 1 0 :1:6 
 `uc 1 ADPSIS 1 0 :1:7 
 ]
-[s S228 . 1 `uc 1 ADMD 1 0 :3:0 
+[s S231 . 1 `uc 1 ADMD 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 ADCRS 1 0 :3:4 
 ]
-[s S232 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S235 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -252,24 +280,24 @@ channel_FVR_Buffer2 63
 `uc 1 CRS1 1 0 :1:5 
 `uc 1 CRS2 1 0 :1:6 
 ]
-[s S240 . 1 `uc 1 MD 1 0 :3:0 
+[s S243 . 1 `uc 1 MD 1 0 :3:0 
 ]
-[s S242 . 1 `uc 1 MD0 1 0 :1:0 
+[s S245 . 1 `uc 1 MD0 1 0 :1:0 
 `uc 1 MD1 1 0 :1:1 
 `uc 1 MD2 1 0 :1:2 
 ]
-[s S246 . 1 `uc 1 ADMODE 1 0 :3:0 
+[s S249 . 1 `uc 1 ADMODE 1 0 :3:0 
 ]
-[u S248 . 1 `S214 1 . 1 0 `S219 1 . 1 0 `S228 1 . 1 0 `S232 1 . 1 0 `S240 1 . 1 0 `S242 1 . 1 0 `S246 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES248  1 e 1 @275 ]
+[u S251 . 1 `S217 1 . 1 0 `S222 1 . 1 0 `S231 1 . 1 0 `S235 1 . 1 0 `S243 1 . 1 0 `S245 1 . 1 0 `S249 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES251  1 e 1 @275 ]
 "4451
 [v _ADCON3 ADCON3 `VEuc  1 e 1 @276 ]
-[s S159 . 1 `uc 1 TMD 1 0 :3:0 
+[s S162 . 1 `uc 1 TMD 1 0 :3:0 
 `uc 1 SOI 1 0 :1:3 
 `uc 1 CALC 1 0 :3:4 
 ]
 "4486
-[s S163 . 1 `uc 1 ADTMD0 1 0 :1:0 
+[s S166 . 1 `uc 1 ADTMD0 1 0 :1:0 
 `uc 1 ADTMD1 1 0 :1:1 
 `uc 1 ADTMD2 1 0 :1:2 
 `uc 1 ADSOI 1 0 :1:3 
@@ -277,11 +305,11 @@ channel_FVR_Buffer2 63
 `uc 1 ADCALC1 1 0 :1:5 
 `uc 1 ADCALC2 1 0 :1:6 
 ]
-[s S171 . 1 `uc 1 ADTMD 1 0 :3:0 
+[s S174 . 1 `uc 1 ADTMD 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 ADCALC 1 0 :3:4 
 ]
-[s S175 . 1 `uc 1 TMD0 1 0 :1:0 
+[s S178 . 1 `uc 1 TMD0 1 0 :1:0 
 `uc 1 TMD1 1 0 :1:1 
 `uc 1 TMD2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -289,11 +317,11 @@ channel_FVR_Buffer2 63
 `uc 1 CALC1 1 0 :1:5 
 `uc 1 CALC2 1 0 :1:6 
 ]
-[u S183 . 1 `S159 1 . 1 0 `S163 1 . 1 0 `S171 1 . 1 0 `S175 1 . 1 0 ]
-[v _ADCON3bits ADCON3bits `VES183  1 e 1 @276 ]
+[u S186 . 1 `S162 1 . 1 0 `S166 1 . 1 0 `S174 1 . 1 0 `S178 1 . 1 0 ]
+[v _ADCON3bits ADCON3bits `VES186  1 e 1 @276 ]
 "4581
 [v _ADSTAT ADSTAT `VEuc  1 e 1 @277 ]
-[s S293 . 1 `uc 1 STAT 1 0 :3:0 
+[s S296 . 1 `uc 1 STAT 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 MATH 1 0 :1:4 
 `uc 1 LTHR 1 0 :1:5 
@@ -301,7 +329,7 @@ channel_FVR_Buffer2 63
 `uc 1 OV 1 0 :1:7 
 ]
 "4616
-[s S300 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+[s S303 . 1 `uc 1 ADSTAT0 1 0 :1:0 
 `uc 1 ADSTAT1 1 0 :1:1 
 `uc 1 ADSTAT2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -310,16 +338,16 @@ channel_FVR_Buffer2 63
 `uc 1 ADUTHR 1 0 :1:6 
 `uc 1 ADAOV 1 0 :1:7 
 ]
-[s S309 . 1 `uc 1 ADSTAT 1 0 :3:0 
+[s S312 . 1 `uc 1 ADSTAT 1 0 :3:0 
 `uc 1 . 1 0 :4:3 
 `uc 1 ADOV 1 0 :1:7 
 ]
-[s S313 . 1 `uc 1 STAT0 1 0 :1:0 
+[s S316 . 1 `uc 1 STAT0 1 0 :1:0 
 `uc 1 STAT1 1 0 :1:1 
 `uc 1 STAT2 1 0 :1:2 
 ]
-[u S317 . 1 `S293 1 . 1 0 `S300 1 . 1 0 `S309 1 . 1 0 `S313 1 . 1 0 ]
-[v _ADSTATbits ADSTATbits `VES317  1 e 1 @277 ]
+[u S320 . 1 `S296 1 . 1 0 `S303 1 . 1 0 `S312 1 . 1 0 `S316 1 . 1 0 ]
+[v _ADSTATbits ADSTATbits `VES320  1 e 1 @277 ]
 "4706
 [v _ADREF ADREF `VEuc  1 e 1 @278 ]
 "4846
@@ -336,7 +364,7 @@ channel_FVR_Buffer2 63
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
 "5281
 [v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
-[s S636 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S671 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -346,11 +374,11 @@ channel_FVR_Buffer2 63
 `uc 1 SPEN 1 0 :1:7 
 ]
 "5307
-[u S645 . 1 `S636 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES645  1 e 1 @285 ]
+[u S680 . 1 `S671 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES680  1 e 1 @285 ]
 "5461
 [v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
-[s S614 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S649 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -360,20 +388,20 @@ channel_FVR_Buffer2 63
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5487
-[u S623 . 1 `S614 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES623  1 e 1 @286 ]
+[u S658 . 1 `S649 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES658  1 e 1 @286 ]
 "5641
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
-[s S45 . 1 `uc 1 ADIF 1 0 :1:0 
+[s S48 . 1 `uc 1 ADIF 1 0 :1:0 
 `uc 1 ADTIF 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIF 1 0 :1:6 
 `uc 1 OSFIF 1 0 :1:7 
 ]
 "19054
-[u S51 . 1 `S45 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES51  1 e 1 @1805 ]
-[s S787 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S54 . 1 `S48 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES54  1 e 1 @1805 ]
+[s S822 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -381,18 +409,18 @@ channel_FVR_Buffer2 63
 `uc 1 RC1IF 1 0 :1:5 
 ]
 "19127
-[u S794 . 1 `S787 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES794  1 e 1 @1807 ]
-[s S60 . 1 `uc 1 ADIE 1 0 :1:0 
+[u S829 . 1 `S822 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES829  1 e 1 @1807 ]
+[s S63 . 1 `uc 1 ADIE 1 0 :1:0 
 `uc 1 ADTIE 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIE 1 0 :1:6 
 `uc 1 OSFIE 1 0 :1:7 
 ]
 "19425
-[u S66 . 1 `S60 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES66  1 e 1 @1815 ]
-[s S542 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S69 . 1 `S63 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES69  1 e 1 @1815 ]
+[s S577 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -400,8 +428,8 @@ channel_FVR_Buffer2 63
 `uc 1 RC1IE 1 0 :1:5 
 ]
 "19498
-[u S549 . 1 `S542 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES549  1 e 1 @1817 ]
+[u S584 . 1 `S577 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES584  1 e 1 @1817 ]
 "19758
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "19803
@@ -462,10 +490,35 @@ channel_FVR_Buffer2 63
 [v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
 "31594
 [v _INLVLC INLVLC `VEuc  1 e 1 @8018 ]
-"58 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\errno.c
+[v _errno errno `i  1 e 2 0 ]
+"19 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\powf.c
+[v _bp bp `DC[2]f  1 s 8 bp ]
+"20
+[v _dp_h dp_h `DC[2]f  1 s 8 dp_h ]
+"21
+[v _dp_l dp_l `DC[2]f  1 s 8 dp_l ]
+"53 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
+[v _curr_pointer curr_pointer `uc  1 e 1 0 ]
+[u S23 schrodi 2 `[2]uc 1 bit8 2 0 `i 1 bit16 2 0 ]
+"62
+[v _frame frame `[10]S23  1 e 20 0 ]
+"59 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [v _ADCC_ADI_InterruptHandler ADCC_ADI_InterruptHandler `*.37(v  1 e 2 0 ]
-"60
+"61
+[v _acumulator acumulator `i  1 e 2 0 ]
+"62
+[v _samples_count samples_count `i  1 e 2 0 ]
+"63
+[v _mean mean `d  1 e 4 0 ]
+"64
+[v _std_ref std_ref `d  1 e 4 0 ]
+"65
 [v _docon docon `uc  1 e 1 0 ]
+"66
+[v _adc_vect adc_vect `[10]i  1 e 20 0 ]
+"73
+[v _my_schrodi my_schrodi `S23  1 e 2 0 ]
 "62 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
 [v _eusart1TxHead eusart1TxHead `VEuc  1 e 1 0 ]
 "63
@@ -486,18 +539,18 @@ channel_FVR_Buffer2 63
 [v _eusart1RxTail eusart1RxTail `VEuc  1 e 1 0 ]
 "72
 [v _eusart1RxBuffer eusart1RxBuffer `VE[8]uc  1 e 8 0 ]
-[s S529 . 1 `uc 1 perr 1 0 :1:0 
+[s S564 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "73
-[u S534 . 1 `S529 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S534  1 e 8 0 ]
+[u S569 . 1 `S564 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S569  1 e 8 0 ]
 "74
 [v _eusart1RxCount eusart1RxCount `VEuc  1 e 1 0 ]
 "75
-[v _eusart1RxLastError eusart1RxLastError `VES534  1 e 1 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES569  1 e 1 0 ]
 "80
 [v _EUSART1_TxDefaultInterruptHandler EUSART1_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "81
@@ -508,14 +561,14 @@ channel_FVR_Buffer2 63
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "85
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"53 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
+"67 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"74
-[v main@eusart1Buffer eusart1Buffer `[8]uc  1 a 8 0 ]
-"72
-[v main@F11012 F11012 `[8]uc  1 s 8 F11012 ]
-"96
+"88
+[v main@eusart1Buffer eusart1Buffer `[8]uc  1 a 8 4 ]
+"86
+[v main@F11018 F11018 `[8]uc  1 s 8 F11018 ]
+"110
 } 0
 "50 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -542,46 +595,46 @@ channel_FVR_Buffer2 63
 {
 "146
 } 0
-"306
+"310
 [v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"308
+"312
 } 0
-"310
+"314
 [v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"312
+"316
 } 0
-"298
+"302
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"300
+"304
 } 0
-"294
+"298
 [v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"296
+"300
 } 0
-"302
+"306
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
-"304
+"308
 } 0
-"65 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"79 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 {
-"122
+"136
 } 0
-"328
+"376
 [v _ADCC_SetADIInterruptHandler ADCC_SetADIInterruptHandler `(v  1 e 1 0 ]
 {
 [v ADCC_SetADIInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"330
+"378
 } 0
 "52 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -598,56 +651,319 @@ channel_FVR_Buffer2 63
 {
 "256
 } 0
-"282
+"286
 [v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
 {
-"288
+"292
 } 0
-"280
+"284
 [v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
 {
 } 0
-"290
+"294
 [v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
 {
-"292
+"296
 } 0
 "258
 [v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
 {
-"278
+"282
 } 0
-"124 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"138 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
 {
-"134
+"148
 } 0
-"310
+"324
 [v _ADCC_ISR ADCC_ISR `(v  1 e 1 0 ]
 {
-"326
+"349
+[v ADCC_ISR@i i `uc  1 a 1 28 ]
+"347
+[v ADCC_ISR@std_s std_s `d  1 a 4 29 ]
+"374
 } 0
-"314 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
+"112 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
+[v _value_approved value_approved `(v  1 e 1 0 ]
+{
+[v value_approved@val val `i  1 p 2 11 ]
+"125
+} 0
+"52 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\powf.c
+[v _powf powf `JJ(f  1 e 4 0 ]
+{
+"151
+[v powf@s2 s2 `f  1 a 4 52 ]
+[v powf@s_h s_h `f  1 a 4 20 ]
+[v powf@t_h t_h `f  1 a 4 16 ]
+[v powf@t_l t_l `f  1 a 4 44 ]
+[v powf@s_l s_l `f  1 a 4 40 ]
+[u S1408 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"58
+[v powf@__xc8_float_word __xc8_float_word `S1408  1 a 4 16 ]
+"54
+[v powf@z z `f  1 a 4 12 ]
+"55
+[v powf@t t `f  1 a 4 8 ]
+"56
+[v powf@j j `l  1 a 4 4 ]
+"57
+[v powf@ix ix `l  1 a 4 0 ]
+"56
+[v powf@k k `l  1 a 4 72 ]
+"54
+[v powf@p_h p_h `f  1 a 4 68 ]
+"57
+[v powf@is is `l  1 a 4 60 ]
+[v powf@iy iy `l  1 a 4 56 ]
+"56
+[v powf@n n `l  1 a 4 48 ]
+"55
+[v powf@sn sn `f  1 a 4 44 ]
+[v powf@t1 t1 `f  1 a 4 40 ]
+"57
+[v powf@hy hy `l  1 a 4 36 ]
+"55
+[v powf@v v `f  1 a 4 32 ]
+[v powf@u u `f  1 a 4 28 ]
+"54
+[v powf@ax ax `f  1 a 4 24 ]
+[v powf@p_l p_l `f  1 a 4 12 ]
+"57
+[v powf@hx hx `l  1 a 4 8 ]
+"55
+[v powf@s s `f  1 a 4 0 ]
+"56
+[v powf@yisint yisint `l  1 a 4 72 ]
+"55
+[v powf@r r `f  1 a 4 68 ]
+[v powf@w w `f  1 a 4 60 ]
+"56
+[v powf@i i `l  1 a 4 36 ]
+"55
+[v powf@y1 y1 `f  1 a 4 32 ]
+"54
+[v powf@z_l z_l `f  1 a 4 28 ]
+[v powf@z_h z_h `f  1 a 4 24 ]
+"55
+[v powf@t2 t2 `f  1 a 4 20 ]
+"52
+[v powf@x x `f  1 p 4 52 ]
+[v powf@y y `f  1 p 4 56 ]
+"264
+} 0
+"22 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sqrtf.c
+[v _sqrtf sqrtf `(f  1 e 4 0 ]
+{
+"26
+[v sqrtf@ix ix `l  1 a 4 48 ]
+"27
+[v sqrtf@r r `ul  1 a 4 44 ]
+"26
+[v sqrtf@m m `l  1 a 4 40 ]
+"24
+[v sqrtf@z z `f  1 a 4 36 ]
+"26
+[v sqrtf@t t `l  1 a 4 32 ]
+[v sqrtf@q q `l  1 a 4 28 ]
+[u S1408 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"28
+[v sqrtf@__xc8_float_word __xc8_float_word `S1408  1 a 4 24 ]
+"26
+[v sqrtf@i i `l  1 a 4 20 ]
+[v sqrtf@s s `l  1 a 4 16 ]
+"22
+[v sqrtf@x x `f  1 p 4 0 ]
+"89
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nanf.c
+[v _nanf nanf `(f  1 e 4 0 ]
+{
+[u S1408 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"6
+[v nanf@u u `S1408  1 a 4 4 ]
+"4
+[v nanf@s s `*.25DCuc  1 p 2 0 ]
+"9
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 54 ]
+[v ___flge@ff2 ff2 `d  1 p 4 58 ]
+"19
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\scalbnf.c
+[v _scalbnf scalbnf `(f  1 e 4 0 ]
+{
+"7
+[v scalbnf@y y `f  1 a 4 62 ]
+[u S1408 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"6
+[v scalbnf@u u `S1408  1 a 4 58 ]
+"4
+[v scalbnf@x x `f  1 p 4 46 ]
+[v scalbnf@n n `i  1 p 2 50 ]
+"31
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1266 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1271 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1274 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1266 1 fAsBytes 4 0 `S1271 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1274  1 a 4 40 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 36 ]
+[s S1343 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1346 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1343 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1346  1 a 2 44 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 35 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 34 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 33 ]
+"8
+[v ___flmul@b b `d  1 p 4 20 ]
+[v ___flmul@a a `d  1 p 4 24 ]
+"205
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fabsf.c
+[v _fabsf fabsf `(f  1 e 4 0 ]
+{
+[u S1408 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"6
+[v fabsf@u u `S1408  1 a 4 4 ]
+"4
+[v fabsf@x x `f  1 p 4 0 ]
+"5
+[v fabsf@F463 F463 `S1408  1 s 4 F463 ]
+"9
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"242 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@a a `d  1 p 4 46 ]
+[v ___flsub@b b `d  1 p 4 50 ]
+"250
+} 0
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 19 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 18 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 17 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 16 ]
+"10
+[v ___fladd@b b `d  1 p 4 0 ]
+[v ___fladd@a a `d  1 p 4 4 ]
+"237
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+{
+[v ___flneg@f1 f1 `d  1 p 4 0 ]
+"20
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 74 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 67 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 72 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 79 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 78 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 71 ]
+"8
+[v ___fldiv@a a `d  1 p 4 54 ]
+[v ___fldiv@b b `d  1 p 4 58 ]
+"185
+} 0
+"127 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\main.c
+[v _parity_check parity_check `(i  1 e 2 0 ]
+{
+"129
+[v parity_check@copy_p copy_p `i  1 a 2 5 ]
+"130
+[v parity_check@pari pari `a  1 a 1 4 ]
+"127
+[v parity_check@parity parity `i  1 p 2 0 ]
+"143
+} 0
+"318 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
 [v _add_Buffer_val add_Buffer_val `(v  1 e 1 0 ]
 {
 [v add_Buffer_val@ADC_char ADC_char `uc  1 a 1 wreg ]
 [v add_Buffer_val@ADC_char ADC_char `uc  1 a 1 wreg ]
 [v add_Buffer_val@ADC_char ADC_char `uc  1 a 1 3 ]
-"324
+"328
 } 0
-"337 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
+"385 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/adcc.c
 [v _adc_one adc_one `(v  1 e 1 0 ]
 {
 [v adc_one@doit doit `uc  1 a 1 wreg ]
 [v adc_one@doit doit `uc  1 a 1 wreg ]
 [v adc_one@doit doit `uc  1 a 1 1 ]
-"339
+"387
 } 0
 "189 C:\Users\JuanJ\Documents\GitHub\crib\Intrumentacion.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
 {
-[v EUSART1_Write@txData txData `*.4uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `*.4uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `*.4uc  1 a 1 1 ]
+[v EUSART1_Write@txData txData `*.7uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `*.7uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `*.7uc  1 a 1 1 ]
 "212
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 0 ]
+"70
 } 0

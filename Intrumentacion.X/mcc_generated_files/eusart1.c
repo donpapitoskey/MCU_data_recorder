@@ -65,7 +65,7 @@ volatile uint8_t eusart1TxBuffer[EUSART1_TX_BUFFER_SIZE];
 volatile uint8_t eusart1TxBufferRemaining;
 volatile char my_data = 0;
 
-char val[22] ={'k','0','0','h','o','l','a','m','u','n','d','k','0','0','h','o','l','a','m','u','n','d'};
+char val[22] ={'h','0','0','h','o','l','a','m','u','n','d','k','0','0','h','o','l','a','m','u','n','t'};
 char buffer_filler = 1;
 volatile uint8_t eusart1RxHead = 0;
 volatile uint8_t eusart1RxTail = 0;
@@ -260,9 +260,13 @@ void EUSART1_RxDataHandler(void){
     //eusart1RxBuffer[eusart1RxHead++] = RC1REG;
     my_data = RC1REG;
     
-    if(my_data == 'o'){
+    if(my_data == 's'){
         ADCC_StartConversion(16);
         adc_one(1);
+        
+    }
+    if(my_data == 'o'){
+        ADCC_StartConversion(16);
         
     }
     if(my_data == 'k'){

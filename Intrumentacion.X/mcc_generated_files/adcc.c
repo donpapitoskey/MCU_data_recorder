@@ -51,17 +51,31 @@
 #include <xc.h>
 #include "adcc.h"
 #include "mcc.h"
+#include <math.h>
 
 /**
   Section: ADCC Module Variables
 */
 void (*ADCC_ADI_InterruptHandler)(void);
 
+int acumulator = 0;
+int samples_count = 0;
+double mean = 0;
+double std_ref = 1;
 char docon=0;
+int adc_vect[10];
+
+union schrodi{
+    char bit8[2];
+    int bit16;
+};
+
+union schrodi my_schrodi;
 /**
   Section: ADCC Module APIs
 */
-
+void value_approved(int val);
+int parity_check(int parity);
 void ADCC_Initialize(void)
 {
     // set the ADCC to the options selected in the User Interface
@@ -311,15 +325,49 @@ void ADCC_ISR(void)
 {
     // Clear the ADCC interrupt flag
     PIR1bits.ADIF = 0;
+    acumulator = acumulator+((int)((ADRESH << 8) + ADRESL));
+    adc_vect[samples_count]=(int)((ADRESH << 8) + ADRESL);
+    
     if(docon ==1){
         LED_SetHigh();
-    
-        add_Buffer_val(ADRESH);
-        add_Buffer_val(ADRESL);
+        my_schrodi.bit16 = parity_check(adc_vect[samples_count]);
+        add_Buffer_val(my_schrodi.bit8[1]);
+        add_Buffer_val(my_schrodi.bit8[0]);
     
         LED_SetLow();
         
     }
+    
+    samples_count++;
+    //add_Buffer_val(ADRESH);
+    //add_Buffer_val(ADRESL);
+    if(samples_count == 10){
+        
+        mean = (double)acumulator/10;
+        double std_s=0;
+        
+        for(char i=0;i<10;i++){
+            
+            std_s = std_s+pow(adc_vect[i]-mean,2);
+        }
+        
+        std_s = sqrt(std_s/9);
+        std_s = 0.5;
+        
+        
+        
+        if(std_s<=std_ref){
+            value_approved(mean);
+            LED_SetHigh();
+        }
+        
+        samples_count =0;
+        LED_SetLow();
+        
+    }
+    
+    
+    
     
     
     

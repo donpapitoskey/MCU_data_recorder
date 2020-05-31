@@ -18367,7 +18367,29 @@ void OSCILLATOR_Initialize(void);
 # 98 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
-# 53 "main.c"
+
+
+
+
+
+
+
+
+int my_val;
+char curr_pointer=0;
+
+union schrodi{
+    char bit8[2];
+    int bit16;
+};
+
+
+
+union schrodi frame[10];
+
+
+
+
 void main(void)
 {
 
@@ -18395,6 +18417,39 @@ void main(void)
     ADCC_Initialize();
     while (1)
     {
-# 95 "main.c"
+# 109 "main.c"
     }
+}
+
+void value_approved(int val){
+
+
+    frame[curr_pointer].bit16 = val;
+
+
+    curr_pointer++;
+
+    if(curr_pointer ==10){
+
+        curr_pointer =0;
+    }
+    do { LATCbits.LATC4 = 0; } while(0);
+}
+
+int parity_check(int parity){
+
+     int copy_p = (unsigned int)parity;
+    _Bool pari=0;
+    while(copy_p){
+        pari = !pari;
+        copy_p = copy_p & (copy_p-1);
+
+    }
+    if(pari){
+        copy_p = parity | (1<<12);
+    }else{
+        copy_p = parity & ~(1<<12);
+    }
+    return copy_p;
+
 }

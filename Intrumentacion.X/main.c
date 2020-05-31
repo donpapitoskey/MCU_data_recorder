@@ -49,6 +49,20 @@
 
 
 
+int my_val;
+char curr_pointer=0;
+
+union schrodi{
+    char bit8[2];
+    int bit16;
+};
+
+
+
+union schrodi frame[10];
+
+
+
 
 void main(void)
 {
@@ -94,6 +108,41 @@ void main(void)
         //fill_buffer(eusart1Buffer);
     }
 }
+
+void value_approved(int val){
+    //charlist[newval] = val;
+    //frame[curr_pointer].bit16 = parity_check(val);
+    frame[curr_pointer].bit16 = val;
+    //add_Buffer_val(frame[curr_pointer].bit8[0]);
+    //add_Buffer_val(frame[curr_pointer].bit8[1]);
+    curr_pointer++;
+    
+    if(curr_pointer ==10){
+        
+        curr_pointer =0;
+    }
+    LED_SetLow();
+}
+
+int parity_check(int parity){
+    
+     int copy_p = (unsigned int)parity;
+    bool pari=0;
+    while(copy_p){
+        pari = !pari;
+        copy_p = copy_p & (copy_p-1);
+        
+    }
+    if(pari){
+        copy_p = parity | (1<<12);
+    }else{
+        copy_p = parity & ~(1<<12);
+    }
+    return copy_p;
+    
+}
+
+
 
 
 /**
