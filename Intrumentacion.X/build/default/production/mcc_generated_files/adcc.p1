@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F11436 `(v ~T0 @X0 0 tf ]
 "68 mcc_generated_files/adcc.c
 [; ;mcc_generated_files/adcc.c: 68: union schrodi{
-[u S1519 `uc -> 2 `i `i 1 ]
+[u S1519 `uc -> 2 `i `ui 1 ]
 [n S1519 schrodi bit8 bit16 ]
 "906 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h: 906: extern volatile unsigned char ADLTHL __attribute__((address(0x08C)));
@@ -287,9 +287,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "373
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\math.h: 373: float sqrtf(float);
 [v _sqrtf `(f ~T0 @X0 0 ef1`f ]
-"77 mcc_generated_files/adcc.c
-[; ;mcc_generated_files/adcc.c: 77: void value_approved(int val);
-[v _value_approved `(v ~T0 @X0 0 ef1`i ]
 [v F11491 `(v ~T0 @X0 0 tf ]
 [v F11493 `(v ~T0 @X0 0 tf ]
 "110 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18446.h
@@ -1658,10 +1655,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/adcc.c: 59: void (*ADCC_ADI_InterruptHandler)(void);
 [v _ADCC_ADI_InterruptHandler `*F11436 ~T0 @X0 1 e ]
 "61
-[; ;mcc_generated_files/adcc.c: 61: int acumulator = 0;
-[v _acumulator `i ~T0 @X0 1 e ]
+[; ;mcc_generated_files/adcc.c: 61: unsigned int acumulator = 0;
+[v _acumulator `ui ~T0 @X0 1 e ]
 [i _acumulator
--> 0 `i
+-> -> 0 `i `ui
 ]
 "62
 [; ;mcc_generated_files/adcc.c: 62: int samples_count = 0;
@@ -1670,10 +1667,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `i
 ]
 "63
-[; ;mcc_generated_files/adcc.c: 63: double mean = 0;
-[v _mean `d ~T0 @X0 1 e ]
+[; ;mcc_generated_files/adcc.c: 63: unsigned int mean = 0;
+[v _mean `ui ~T0 @X0 1 e ]
 [i _mean
--> -> 0 `i `d
+-> -> 0 `i `ui
 ]
 "64
 [; ;mcc_generated_files/adcc.c: 64: double std_ref = 1;
@@ -2283,7 +2280,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
 "328
 [; ;mcc_generated_files/adcc.c: 328:     acumulator = acumulator+((int)((ADRESH << 8) + ADRESL));
-[e = _acumulator + _acumulator + << -> _ADRESH `i -> 8 `i -> _ADRESL `i ]
+[e = _acumulator + _acumulator -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
 "329
 [; ;mcc_generated_files/adcc.c: 329:     adc_vect[samples_count]=(int)((ADRESH << 8) + ADRESL);
 [e = *U + &U _adc_vect * -> -> _samples_count `ui `ux -> -> # *U &U _adc_vect `ui `ux + << -> _ADRESH `i -> 8 `i -> _ADRESL `i ]
@@ -2300,7 +2297,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1553 ]
 "333
 [; ;mcc_generated_files/adcc.c: 333:         my_schrodi.bit16 = parity_check(adc_vect[samples_count]);
-[e = . _my_schrodi 1 ( _parity_check (1 *U + &U _adc_vect * -> -> _samples_count `ui `ux -> -> # *U &U _adc_vect `ui `ux ]
+[e = . _my_schrodi 1 -> ( _parity_check (1 *U + &U _adc_vect * -> -> _samples_count `ui `ux -> -> # *U &U _adc_vect `ui `ux `ui ]
 "334
 [; ;mcc_generated_files/adcc.c: 334:         add_Buffer_val(my_schrodi.bit8[1]);
 [e ( _add_Buffer_val (1 *U + &U . _my_schrodi 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _my_schrodi 0 `ui `ux ]
@@ -2326,8 +2323,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == _samples_count -> 10 `i 1558  ]
 {
 "346
-[; ;mcc_generated_files/adcc.c: 346:         mean = (double)acumulator/10;
-[e = _mean / -> _acumulator `d -> -> 10 `i `d ]
+[; ;mcc_generated_files/adcc.c: 346:         mean = acumulator/10;
+[e = _mean / _acumulator -> -> 10 `i `ui ]
 "347
 [; ;mcc_generated_files/adcc.c: 347:         double std_s=0;
 [v _std_s `d ~T0 @X0 1 a ]
@@ -2343,7 +2340,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "351
 [; ;mcc_generated_files/adcc.c: 351:             std_s = std_s+powf(adc_vect[i]-mean,2);
-[e = _std_s + _std_s -> ( _powf (2 , -> - -> *U + &U _adc_vect * -> _i `ux -> -> # *U &U _adc_vect `ui `ux `d _mean `f -> -> 2 `i `f `d ]
+[e = _std_s + _std_s -> ( _powf (2 , -> - -> *U + &U _adc_vect * -> _i `ux -> -> # *U &U _adc_vect `ui `ux `ui _mean `f -> -> 2 `i `f `d ]
 "352
 [; ;mcc_generated_files/adcc.c: 352:         }
 }
@@ -2357,77 +2354,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 "355
 [; ;mcc_generated_files/adcc.c: 355:         std_s = 0.5;
 [e = _std_s .0.5 ]
-"359
-[; ;mcc_generated_files/adcc.c: 359:         if(std_s<=std_ref){
-[e $ ! <= _std_s _std_ref 1562  ]
+"357
+[; ;mcc_generated_files/adcc.c: 357:         if(docon ==2){
+[e $ ! == -> _docon `i -> 2 `i 1562  ]
 {
+"359
+[; ;mcc_generated_files/adcc.c: 359:             my_schrodi.bit16 = parity_check(mean);
+[e = . _my_schrodi 1 -> ( _parity_check (1 -> _mean `i `ui ]
 "360
-[; ;mcc_generated_files/adcc.c: 360:             value_approved(mean);
-[e ( _value_approved (1 -> _mean `i ]
+[; ;mcc_generated_files/adcc.c: 360:             add_Buffer_val(my_schrodi.bit8[1]);
+[e ( _add_Buffer_val (1 *U + &U . _my_schrodi 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _my_schrodi 0 `ui `ux ]
 "361
-[; ;mcc_generated_files/adcc.c: 361:             do { LATCbits.LATC4 = 1; } while(0);
+[; ;mcc_generated_files/adcc.c: 361:             add_Buffer_val(my_schrodi.bit8[0]);
+[e ( _add_Buffer_val (1 *U + &U . _my_schrodi 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _my_schrodi 0 `ui `ux ]
+"362
+[; ;mcc_generated_files/adcc.c: 362:             do { LATCbits.LATC4 = 1; } while(0);
 [e :U 1565 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 1564 ]
-"362
-[; ;mcc_generated_files/adcc.c: 362:         }
+"363
+[; ;mcc_generated_files/adcc.c: 363:         }
 }
 [e :U 1562 ]
-"364
-[; ;mcc_generated_files/adcc.c: 364:         samples_count =0;
-[e = _samples_count -> 0 `i ]
 "365
-[; ;mcc_generated_files/adcc.c: 365:         do { LATCbits.LATC4 = 0; } while(0);
-[e :U 1568 ]
+[; ;mcc_generated_files/adcc.c: 365:         if(std_s<=std_ref){
+[e $ ! <= _std_s _std_ref 1566  ]
+{
+"367
+[; ;mcc_generated_files/adcc.c: 367:         }
+}
+[e :U 1566 ]
+"369
+[; ;mcc_generated_files/adcc.c: 369:         samples_count =0;
+[e = _samples_count -> 0 `i ]
+"370
+[; ;mcc_generated_files/adcc.c: 370:         acumulator = 0;
+[e = _acumulator -> -> 0 `i `ui ]
+"371
+[; ;mcc_generated_files/adcc.c: 371:         do { LATCbits.LATC4 = 0; } while(0);
+[e :U 1569 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 1567 ]
-"367
-[; ;mcc_generated_files/adcc.c: 367:     }
+[e :U 1568 ]
+"373
+[; ;mcc_generated_files/adcc.c: 373:     }
 }
 [e :U 1558 ]
-"374
-[; ;mcc_generated_files/adcc.c: 374: }
+"380
+[; ;mcc_generated_files/adcc.c: 380: }
 [e :UE 1550 ]
 }
-"376
-[; ;mcc_generated_files/adcc.c: 376: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
+"382
+[; ;mcc_generated_files/adcc.c: 382: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
 [v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 1 ef1`*F11491 ]
 {
 [e :U _ADCC_SetADIInterruptHandler ]
 [v _InterruptHandler `*F11493 ~T0 @X0 1 r1 ]
 [f ]
-"377
-[; ;mcc_generated_files/adcc.c: 377:     ADCC_ADI_InterruptHandler = InterruptHandler;
+"383
+[; ;mcc_generated_files/adcc.c: 383:     ADCC_ADI_InterruptHandler = InterruptHandler;
 [e = _ADCC_ADI_InterruptHandler _InterruptHandler ]
-"378
-[; ;mcc_generated_files/adcc.c: 378: }
-[e :UE 1569 ]
+"384
+[; ;mcc_generated_files/adcc.c: 384: }
+[e :UE 1570 ]
 }
-"380
-[; ;mcc_generated_files/adcc.c: 380: void ADCC_DefaultInterruptHandler(void){
+"386
+[; ;mcc_generated_files/adcc.c: 386: void ADCC_DefaultInterruptHandler(void){
 [v _ADCC_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _ADCC_DefaultInterruptHandler ]
 [f ]
-"383
-[; ;mcc_generated_files/adcc.c: 383: }
-[e :UE 1570 ]
+"389
+[; ;mcc_generated_files/adcc.c: 389: }
+[e :UE 1571 ]
 }
-"385
-[; ;mcc_generated_files/adcc.c: 385: void adc_one(char doit){
+"391
+[; ;mcc_generated_files/adcc.c: 391: void adc_one(char doit){
 [v _adc_one `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _adc_one ]
 [v _doit `uc ~T0 @X0 1 r1 ]
 [f ]
-"386
-[; ;mcc_generated_files/adcc.c: 386:     docon=doit;
+"392
+[; ;mcc_generated_files/adcc.c: 392:     docon=doit;
 [e = _docon _doit ]
-"387
-[; ;mcc_generated_files/adcc.c: 387: }
-[e :UE 1571 ]
+"393
+[; ;mcc_generated_files/adcc.c: 393: }
+[e :UE 1572 ]
 }

@@ -18751,16 +18751,16 @@ double yn(int, double);
 
 void (*ADCC_ADI_InterruptHandler)(void);
 
-int acumulator = 0;
+unsigned int acumulator = 0;
 int samples_count = 0;
-double mean = 0;
+unsigned int mean = 0;
 double std_ref = 1;
 char docon=0;
 int adc_vect[10];
 
 union schrodi{
     char bit8[2];
-    int bit16;
+    unsigned int bit16;
 };
 
 union schrodi my_schrodi;
@@ -19036,7 +19036,7 @@ void ADCC_ISR(void)
 
     if(samples_count == 10){
 
-        mean = (double)acumulator/10;
+        mean = acumulator/10;
         double std_s=0;
 
         for(char i=0;i<10;i++){
@@ -19047,14 +19047,20 @@ void ADCC_ISR(void)
         std_s = sqrtf(std_s/9);
         std_s = 0.5;
 
+        if(docon ==2){
 
-
-        if(std_s<=std_ref){
-            value_approved(mean);
+            my_schrodi.bit16 = parity_check(mean);
+            add_Buffer_val(my_schrodi.bit8[1]);
+            add_Buffer_val(my_schrodi.bit8[0]);
             do { LATCbits.LATC4 = 1; } while(0);
         }
 
+        if(std_s<=std_ref){
+
+        }
+
         samples_count =0;
+        acumulator = 0;
         do { LATCbits.LATC4 = 0; } while(0);
 
     }

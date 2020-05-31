@@ -18444,6 +18444,7 @@ void EUSART1_RxDataHandler(void){
     }
     if(my_data == 'o'){
         ADCC_StartConversion(16);
+        adc_one(2);
 
     }
     if(my_data == 'k'){

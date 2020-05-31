@@ -58,16 +58,16 @@
 */
 void (*ADCC_ADI_InterruptHandler)(void);
 
-int acumulator = 0;
+unsigned int acumulator = 0;
 int samples_count = 0;
-double mean = 0;
+unsigned int mean = 0;
 double std_ref = 1;
 char docon=0;
 int adc_vect[10];
 
 union schrodi{
     char bit8[2];
-    int bit16;
+    unsigned int bit16;
 };
 
 union schrodi my_schrodi;
@@ -343,7 +343,7 @@ void ADCC_ISR(void)
     //add_Buffer_val(ADRESL);
     if(samples_count == 10){
         
-        mean = (double)acumulator/10;
+        mean = acumulator/10;
         double std_s=0;
         
         for(char i=0;i<10;i++){
@@ -354,14 +354,20 @@ void ADCC_ISR(void)
         std_s = sqrt(std_s/9);
         std_s = 0.5;
         
-        
-        
-        if(std_s<=std_ref){
-            value_approved(mean);
+        if(docon ==2){
+            //my_schrodi.bit16 =  mean;
+            my_schrodi.bit16 = parity_check(mean);
+            add_Buffer_val(my_schrodi.bit8[1]);
+            add_Buffer_val(my_schrodi.bit8[0]);
             LED_SetHigh();
         }
         
+        if(std_s<=std_ref){
+             
+        }
+        
         samples_count =0;
+        acumulator = 0;
         LED_SetLow();
         
     }
