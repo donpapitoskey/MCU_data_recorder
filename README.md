@@ -1,2 +1,2 @@
-#MCU_data_recorder
+#MCU data recorder
 #here are the codes from donpapitoskey
